@@ -1,0 +1,36 @@
+{
+   "action": {
+      "default_icon": "icon.png",
+      "default_popup": "index.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "content.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+   },
+   "description": "Highlight text to analyze with AI detection, plagiarism checker, humanizer, and fact checker.",
+   "host_permissions": [ "http://*/*", "https://*/*" ],
+   "icons": {
+      "128": "icon.png",
+      "16": "icon.png",
+      "48": "icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtD0gxHrdxCfkOUUV2Fwt13UK1z/Jfo+38Bv8ONExbP+7/uBhcOrKSOwXTH9ThMAAj5xG6BraLfS8CUCwkP3j+/zoiUBAIP+4sx6vCle0UuXLT4uXlczg/CISe6/zwaTIZ/VsfEh+B0rZQp4JnvjeLQoXcJOhCG/ltvLlhiUZwumypAXjUuLHCY9z8hEklCPVSrXibCvKZ2TBgN0BTRDd/LD0hyUIYCKxeE/5+22Ai/5YWbeH0zfUmyjBVPVBXs/bHPOJOltsqVtgb5I2itULWUsVTkGf6HnWiVykZv4dhYduz567amOvimS4jia51Bk4i3pOVFN3QTN0fHORLZa86wIDAQAB",
+   "manifest_version": 3,
+   "name": "Detecting-ai.com: AI Detector, Humanizer & Fact Checker",
+   "permissions": [ "scripting", "activeTab", "storage", "sidePanel", "cookies", "tabs" ],
+   "side_panel": {
+      "default_path": "index.html"
+   },
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0",
+   "web_accessible_resources": [ {
+      "matches": [ "http://*/*", "https://*/*" ],
+      "resources": [ "icon.png", "index.html" ]
+   } ]
+}
